@@ -315,20 +315,20 @@ const CorAbout = () => {
               className="pink col-span-4 p-8 md:col-span-1"
             >
               <div className="flex gap-3">
-                <Image
+                {/* <Image
                   src={"/images/avatar.jpg"}
                   alt="logo"
                   width={50}
                   height={50}
                   className="h-[50px] w-[50px] rounded-[50%] object-cover"
-                />
+                /> */}
                 <div className="mb-10">
-                  <div className="text-muted text-lg text-white">
+                  {/* <div className="text-muted text-lg text-white">
                     Renata Alink
                   </div>
                   <Text className="text-muted text-[0.8rem] text-white">
                     Founder
-                  </Text>
+                  </Text> */}
                 </div>
               </div>
               <Text
@@ -336,9 +336,7 @@ const CorAbout = () => {
                 fontSize="lg"
                 className="text-muted mb-10 text-[0.875rem] text-white"
               >
-                We don&apos;t like to re-invent the wheel, neither should you.
-                We selected the most productive and established tools in the
-                scene and build Saas UI on top of it.
+                "In the dynamic landscape of corporate training, embracing change and integrating new technologies is imperative to staying ahead. We not only leverage the most effective and established methodologies but also continually adapt and incorporate innovative tools to ensure your team remains at the forefront of industry advancements."
               </Text>
             </motion.div>
             <motion.div
@@ -360,35 +358,33 @@ const CorAbout = () => {
               className=" col-span-4 border-0 border-black p-8 md:col-span-2"
             >
               <Heading className="mb-8 text-3xl font-semibold text-black dark:text-white">
-                Start your next idea two steps ahead
+              Discover a World of Learning: Explore Our Extensive Course Catalog
               </Heading>
               <Text
                 color="muted"
                 fontSize="lg"
                 className="text-muted mb-10 text-[1rem]"
               >
-                We took care of all your basic frontend needs, so you can start
-                building functionality that makes your product unique.
+                Embark on a Journey of Professional Growth with Comprehensive Training in a Multitude of Disciplines
               </Text>
               <Wrap mt="8">
                 {[
-                  "authentication",
-                  "navigation",
-                  "crud",
-                  "settings",
-                  "multi-tenancy",
-                  "layouts",
-                  "billing",
-                  "a11y testing",
-                  "server-side rendering",
-                  "documentation",
-                  "onboarding",
-                  "storybooks",
-                  "theming",
-                  "upselling",
-                  "unit testing",
-                  "feature flags",
-                  "responsiveness",
+                  "AWS",
+                  "ReactJs / React Native",
+                  "SAP",
+                  ".Net",
+                  "PHP",
+                  "Web Developement",
+                  "Salesforce",
+                  "Six SIGMA",
+                  "Azure",
+                  "Cybersecurity",
+                  "Quality Management",
+                  "Project Management",
+                  "No-Code developement",
+                  "OpenAI & LLM Training",
+                  "Prompt Engeinering",
+                  "And Many More....",
                 ].map((value) => (
                   <Tag
                     key={value}
@@ -409,7 +405,7 @@ const CorAbout = () => {
             headerInfo={{
               title: "Our Approach              ",
               subtitle: "Tailored Solutions for Your Success",
-              description: `We provide personalized solutions tailored to your unique needs. With collaborative teamwork and a commitment to your success, we offer expertise in design, development, marketing, and strategy. Let's work together to bring your ideas to life and take your business to new heights. Contact us today to get started!`,
+              description: `We specialize in personalized training solutions, meticulously tailored to meet your unique needs. Through collaborative teamwork and unwavering commitment to your success, we bring expertise in empowering your team.`,
             }}
           />
           <div className="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:mt-15 lg:grid-cols-4 xl:mt-20 xl:gap-12.5">

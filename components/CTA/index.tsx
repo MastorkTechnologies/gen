@@ -32,9 +32,7 @@ const CTA = () => {
                 Empower Your Team's Potential Elevate with Corporate Training
               </h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
-                convallis tortor eros. Donec vitae tortor lacus. Phasellus
-                aliquam ante in maximus.
+              Empower your workforce and unlock growth opportunities with tailored programs designed to maximize productivity, efficiency, and success
               </p>
             </motion.div>
             <motion.div
