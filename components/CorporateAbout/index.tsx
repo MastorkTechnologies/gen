@@ -1,31 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import {
-  Highlights,
-  HighlightsItem,
-  HighlightsTestimonialItem,
-} from "../Higlight";
-import {
-  Avatar,
-  Box,
-  Card,
-  CardBody,
-  Grid,
-  GridItem,
-  Heading,
-  Tag,
-  Text,
-  Wrap,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import { transparentize } from "@chakra-ui/theme-tools";
-import { useTheme } from "@emotion/react";
+import { Heading, Tag, Text, Wrap } from "@chakra-ui/react";
 import SectionHeader from "../Common/SectionHeader";
-import SingleFeature from "../Features/SingleFeature";
-import featuresData from "../Features/featuresData";
-// import { Highlights, HighlightsItem, HighlightsTestimonialItem } from "../highlights";
-// import { Box, Flex, Tag, Text, VStack, Wrap } from "@chakra-ui/react";
 
 const CorAbout = () => {
   const approachData = [
@@ -481,7 +458,31 @@ const CorAbout = () => {
           />
           <div className="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:mt-15 lg:grid-cols-3 xl:mt-20 xl:gap-12.5">
             {chooseData.map((feature, key) => (
-              <SingleFeature feature={feature} key={key} />
+              <div key={key} className="h-full w-full">
+                <motion.div
+                  variants={{
+                    hidden: {
+                      opacity: 0,
+                      y: -10,
+                    },
+
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                    },
+                  }}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className=" animate_top z-40 h-full w-full rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
+                >
+                  <h3 className="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
+                    {feature.title}
+                  </h3>
+                  <p>{feature.description}</p>
+                </motion.div>
+              </div>
             ))}
           </div>
         </div>
