@@ -226,6 +226,281 @@ const CorAbout = () => {
           </div>
         </div>
       </section>
+      <section className="pb-20 lg:pb-25 xl:pb-30">
+        <div className="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[390px_minmax(680px,_1fr)_0px] ">
+            <motion.div
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  y: -10,
+                },
+
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                },
+              }}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="pink col-span-4 p-8 md:col-span-1"
+            >
+              <div className="flex gap-3">
+                {/* <Image
+                  src={"/images/avatar.jpg"}
+                  alt="logo"
+                  width={50}
+                  height={50}
+                  className="h-[50px] w-[50px] rounded-[50%] object-cover"
+                /> */}
+                <div className="mb-10">
+                  {/* <div className="text-muted text-lg text-white">
+                    Renata Alink
+                  </div>
+                  <Text className="text-muted text-[0.8rem] text-white">
+                    Founder
+                  </Text> */}
+                </div>
+              </div>
+              <Text
+                color="muted"
+                fontSize="lg"
+                className="text-muted mb-10 text-[0.875rem] text-white"
+              >
+                "In the dynamic landscape of corporate training, embracing
+                change and integrating new technologies is imperative to staying
+                ahead. We not only leverage the most effective and established
+                methodologies but also continually adapt and incorporate
+                innovative tools to ensure your team remains at the forefront of
+                industry advancements."
+              </Text>
+            </motion.div>
+            <motion.div
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  y: -10,
+                },
+
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                },
+              }}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className=" col-span-4 border-0 border-black p-8 md:col-span-2"
+            >
+              <Heading className="mb-8 text-3xl font-semibold text-black dark:text-white">
+                Discover a World of Learning: Explore Our Extensive Course
+                Catalog
+              </Heading>
+              <Text
+                color="muted"
+                fontSize="lg"
+                className="text-muted mb-10 text-[1rem]"
+              >
+                Embark on a Journey of Professional Growth with Comprehensive
+                Training in a Multitude of Disciplines
+              </Text>
+              <Wrap mt="8">
+                {[
+                  "AWS",
+                  "ReactJs / React Native",
+                  "SAP",
+                  ".Net",
+                  "PHP",
+                  "Web Developement",
+                  "Salesforce",
+                  "Six SIGMA",
+                  "Azure",
+                  "Cybersecurity",
+                  "Quality Management",
+                  "Project Management",
+                  "No-Code developement",
+                  "OpenAI & LLM Training",
+                  "Prompt Engeinering",
+                  "And Many More....",
+                ].map((value) => (
+                  <Tag
+                    key={value}
+                    variant="subtle"
+                    className="rounded-full bg-purple-100 px-3 text-[0.8125rem] font-semibold text-purple-600"
+                  >
+                    {value}
+                  </Tag>
+                ))}
+              </Wrap>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      <section className="py-20 lg:py-25 xl:py-30 xl:pb-0">
+        <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
+          <SectionHeader
+            headerInfo={{
+              title: "Our Approach              ",
+              subtitle: "Tailored Solutions for Your Success",
+              description: `We specialize in personalized training solutions, meticulously tailored to meet your unique needs. Through collaborative teamwork and unwavering commitment to your success, we bring expertise in empowering your team.`,
+            }}
+          />
+          <div className="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:mt-15 lg:grid-cols-4 xl:mt-20 xl:gap-12.5">
+            {approachData.map((item, key) => {
+              return (
+                <motion.div
+                  variants={{
+                    hidden: {
+                      opacity: 0,
+                      y: -10,
+                    },
+
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                    },
+                  }}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  key={key}
+                  className="flex h-full w-full items-center justify-center"
+                >
+                  <div className="flex h-full w-full flex-col items-center justify-center rounded-[50%] border p-3 shadow-solid-3 transition-all hover:shadow-solid-4 dark:bg-blacksection dark:hover:bg-hoverdark">
+                    <h3 className="mb-2 mt-5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
+                      {item.title}
+                    </h3>
+                    <p className="text-center">{item.description}</p>
+                  </div>
+                </motion.div>
+              );
+            })}
+            <div></div>
+          </div>
+        </div>
+      </section>
+      <section className="py-20 lg:py-25 xl:py-30">
+        <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
+          <SectionHeader
+            headerInfo={{
+              title: "BENFITS",
+              subtitle: "Why Choose Genspace?",
+              description: `So if you're looking for a partner who is committed to excellence, innovation, and your success, look no further than Genspace. Get in touch with us today to discuss how we can help bring your vision to life.`,
+            }}
+          />
+          <div className="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:mt-15 lg:grid-cols-3 xl:mt-20 xl:gap-12.5">
+            {chooseData.map((feature, key) => (
+              <div key={key} className="h-full w-full">
+                <motion.div
+                  variants={{
+                    hidden: {
+                      opacity: 0,
+                      y: -10,
+                    },
+
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                    },
+                  }}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className=" animate_top z-40 h-full w-full rounded-lg border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
+                >
+                  <h3 className="mb-5 mt-7.5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
+                    {feature.title}
+                  </h3>
+                  <p>{feature.description}</p>
+                </motion.div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="overflow-hidden px-4 py-20 md:px-8 lg:py-25 xl:py-30 2xl:px-0">
+        <div className="mx-auto max-w-c-1390 rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] px-7.5 py-12.5 dark:bg-blacksection dark:bg-gradient-to-t dark:from-transparent dark:to-transparent dark:stroke-strokedark md:px-12.5 xl:px-17.5 xl:py-0">
+          <div className="flex flex-wrap gap-8 md:flex-nowrap md:items-center md:justify-between md:gap-0">
+            <motion.div
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  x: -20,
+                },
+
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                },
+              }}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 1, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="animate_left md:w-[70%] lg:w-1/2"
+            >
+              <h2 className="mb-4 w-11/12 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle4">
+                Ready to take the next step?
+              </h2>
+              <p>
+                Reach out to us today and let's start building something great
+                together! Explore our interactive content below to learn more
+                about how Genspace can help you achieve your goals.
+              </p>
+            </motion.div>
+            <motion.div
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  x: 20,
+                },
+
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                },
+              }}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 1, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="animate_right lg:w-[45%]"
+            >
+              <div className="flex items-center justify-end xl:justify-between">
+                <Image
+                  width={299}
+                  height={299}
+                  src="/images/shape/shape-06.png"
+                  alt="Saly"
+                  className="hidden xl:block"
+                />
+                <a className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black">
+                  Reach us
+                  <Image
+                    width={20}
+                    height={20}
+                    src="/images/icon/icon-arrow-dark.svg"
+                    alt="Arrow"
+                    className="dark:hidden"
+                  />
+                  <Image
+                    width={20}
+                    height={20}
+                    src="/images/icon/icon-arrow-light.svg"
+                    alt="Arrow"
+                    className="hidden dark:block"
+                  />
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
       {/* <!-- ===== About End ===== --> */}
       {/* <!-- ===== About Two Start ===== --> */}
       {/* <section>
@@ -316,250 +591,6 @@ const CorAbout = () => {
           </div>
         </div>
       </section> */}
-      <section className="pb-20 lg:pb-25 xl:pb-30">
-        <div className="mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[390px_minmax(680px,_1fr)_0px] ">
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  y: -10,
-                },
-
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="pink col-span-4 p-8 md:col-span-1"
-            >
-              <div className="flex gap-3">
-                {/* <Image
-                  src={"/images/avatar.jpg"}
-                  alt="logo"
-                  width={50}
-                  height={50}
-                  className="h-[50px] w-[50px] rounded-[50%] object-cover"
-                /> */}
-                <div className="mb-10">
-                  {/* <div className="text-muted text-lg text-white">
-                    Renata Alink
-                  </div>
-                  <Text className="text-muted text-[0.8rem] text-white">
-                    Founder
-                  </Text> */}
-                </div>
-              </div>
-              <Text
-                color="muted"
-                fontSize="lg"
-                className="text-muted mb-10 text-[0.875rem] text-white"
-              >
-                "In the dynamic landscape of corporate training, embracing change and integrating new technologies is imperative to staying ahead. We not only leverage the most effective and established methodologies but also continually adapt and incorporate innovative tools to ensure your team remains at the forefront of industry advancements."
-              </Text>
-            </motion.div>
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  y: -10,
-                },
-
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className=" col-span-4 border-0 border-black p-8 md:col-span-2"
-            >
-              <Heading className="mb-8 text-3xl font-semibold text-black dark:text-white">
-              Discover a World of Learning: Explore Our Extensive Course Catalog
-              </Heading>
-              <Text
-                color="muted"
-                fontSize="lg"
-                className="text-muted mb-10 text-[1rem]"
-              >
-                Embark on a Journey of Professional Growth with Comprehensive Training in a Multitude of Disciplines
-              </Text>
-              <Wrap mt="8">
-                {[
-                  "AWS",
-                  "ReactJs / React Native",
-                  "SAP",
-                  ".Net",
-                  "PHP",
-                  "Web Developement",
-                  "Salesforce",
-                  "Six SIGMA",
-                  "Azure",
-                  "Cybersecurity",
-                  "Quality Management",
-                  "Project Management",
-                  "No-Code developement",
-                  "OpenAI & LLM Training",
-                  "Prompt Engeinering",
-                  "And Many More....",
-                ].map((value) => (
-                  <Tag
-                    key={value}
-                    variant="subtle"
-                    className="rounded-full bg-purple-100 px-3 text-[0.8125rem] font-semibold text-purple-600"
-                  >
-                    {value}
-                  </Tag>
-                ))}
-              </Wrap>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-      <section className="py-20 lg:py-25 xl:py-30 xl:pb-0">
-        <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
-          <SectionHeader
-            headerInfo={{
-              title: "Our Approach              ",
-              subtitle: "Tailored Solutions for Your Success",
-              description: `We specialize in personalized training solutions, meticulously tailored to meet your unique needs. Through collaborative teamwork and unwavering commitment to your success, we bring expertise in empowering your team.`,
-            }}
-          />
-          <div className="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:mt-15 lg:grid-cols-4 xl:mt-20 xl:gap-12.5">
-            {approachData.map((item, key) => {
-              return (
-                <motion.div
-                  variants={{
-                    hidden: {
-                      opacity: 0,
-                      y: -10,
-                    },
-
-                    visible: {
-                      opacity: 1,
-                      y: 0,
-                    },
-                  }}
-                  initial="hidden"
-                  whileInView="visible"
-                  transition={{ duration: 0.5 }}
-                  viewport={{ once: true }}
-                  key={key}
-                  className="flex h-full w-full items-center justify-center"
-                >
-                  <div className="flex h-full w-full flex-col items-center justify-center rounded-[50%] border p-3 shadow-solid-3 transition-all hover:shadow-solid-4 dark:bg-blacksection dark:hover:bg-hoverdark">
-                    <h3 className="mb-2 mt-5 text-xl font-semibold text-black dark:text-white xl:text-itemtitle">
-                      {item.title}
-                    </h3>
-                    <p className="text-center">{item.description}</p>
-                  </div>
-                </motion.div>
-              );
-            })}
-            <div></div>
-          </div>
-        </div>
-      </section>
-      <section className="py-20 lg:py-25 xl:py-30">
-        <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
-          <SectionHeader
-            headerInfo={{
-              title: "BENFITS",
-              subtitle: "Why Choose Genspace?",
-              description: `So if you're looking for a partner who is committed to excellence, innovation, and your success, look no further than Genspace. Get in touch with us today to discuss how we can help bring your vision to life.`,
-            }}
-          />
-          <div className="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:mt-15 lg:grid-cols-3 xl:mt-20 xl:gap-12.5">
-            {chooseData.map((feature, key) => (
-              <SingleFeature feature={feature} key={key} />
-            ))}
-          </div>
-        </div>
-      </section>
-      <section className="overflow-hidden px-4 py-20 md:px-8 lg:py-25 xl:py-30 2xl:px-0">
-        <div className="mx-auto max-w-c-1390 rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] px-7.5 py-12.5 dark:bg-blacksection dark:bg-gradient-to-t dark:from-transparent dark:to-transparent dark:stroke-strokedark md:px-12.5 xl:px-17.5 xl:py-0">
-          <div className="flex flex-wrap gap-8 md:flex-nowrap md:items-center md:justify-between md:gap-0">
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  x: -20,
-                },
-
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="animate_left md:w-[70%] lg:w-1/2"
-            >
-              <h2 className="mb-4 w-11/12 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle4">
-                Ready to take the next step?
-              </h2>
-              <p>
-                Reach out to us today and let's start building something great
-                together! Explore our interactive content below to learn more
-                about how Genspace can help you achieve your goals.
-              </p>
-            </motion.div>
-            <motion.div
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  x: 20,
-                },
-
-                visible: {
-                  opacity: 1,
-                  x: 0,
-                },
-              }}
-              initial="hidden"
-              whileInView="visible"
-              transition={{ duration: 1, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="animate_right lg:w-[45%]"
-            >
-              <div className="flex items-center justify-end xl:justify-between">
-                <Image
-                  width={299}
-                  height={299}
-                  src="/images/shape/shape-06.png"
-                  alt="Saly"
-                  className="hidden xl:block"
-                />
-                <a className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white hover:opacity-90 dark:bg-white dark:text-black">
-                  Reach us
-                  <Image
-                    width={20}
-                    height={20}
-                    src="/images/icon/icon-arrow-dark.svg"
-                    alt="Arrow"
-                    className="dark:hidden"
-                  />
-                  <Image
-                    width={20}
-                    height={20}
-                    src="/images/icon/icon-arrow-light.svg"
-                    alt="Arrow"
-                    className="hidden dark:block"
-                  />
-                </a>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
       {/* <!-- ===== About Two End ===== --> */}
       {/* <Highlights>
       <HighlightsItem colSpan={[1, null, 2]} title="Core components">
